@@ -1,0 +1,1 @@
+web: gunicorn kwamboka.wsgi --log-file -
