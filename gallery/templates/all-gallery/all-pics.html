@@ -16,7 +16,7 @@
 
 </div>
 
-<!-- Large modal -->
+
 {% for image in images %}
 
 <!-- Modal -->
@@ -40,7 +40,8 @@
         {% endfor %}
 
         <!-- The button used to copy the text -->
-
+        <input class="form-control" type="text" value="https://kwambokagallery.herokuapp.com{{image.gallery_image.url}}">
+        <br>
         <button type="button" name="button" class="btn btn-info" value="https://kwambokagallery.herokuapp.com{{image.gallery_image.url}}" onclick="copylink(this.value)">Copy Image Link</button>
       </div>
       <div class="modal-footer">
@@ -50,5 +51,19 @@
     </div>
   </div>
 </div>
+
+<script>
+  function copylink(value) {
+      function copy_link(event){
+          event.clipboardData.setData('text/plain', value);
+          event.preventDefault();
+          document.removeEventListener('copy', copy_link, true);
+      }
+      document.addEventListener('copy', copy_link, true);
+      document.execCommand('copy');
+  }
+  </script>
+  
+
 {% endfor%}
 {% endblock content %}
