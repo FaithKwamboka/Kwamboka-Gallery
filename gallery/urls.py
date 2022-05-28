@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path,re_path
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
@@ -6,8 +6,9 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', views.home,name='home'),
     path('search', views.search_results, name='search_results'),
-    path('image',views.get_image_by_id,name ='image'),
-    # path('location/<id>',views.filter_by_location,name='location')
+    # path('image/<id>',views.get_image_by_id,name ='image'),
+    re_path(r'^image/(\d+)',views.get_image_by_id,name ='image'),
+   
 ]
 
 if settings.DEBUG:

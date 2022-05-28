@@ -7,7 +7,7 @@ from django.core.exceptions import ObjectDoesNotExist
 def home(request):
     images = Image.objects.all()
     location = Location.objects.all()
-    category = Category.objects.all()
+    category = categories.objects.all()
 
     if 'location' in request.GET and request.GET['location']:
         location = request.GET.get('location')
@@ -16,7 +16,7 @@ def home(request):
     elif 'category' in request.GET and request.GET['category']:
         category = request.GET.get('categories')
         images = Image.view_category(category)
-        return render(request, 'all-gallery/all-pics.html', {"location":location,"images":images,"category":category })
+        return render(request, 'all-gallery/all-pics.html', {"location":location,"images":images,"cat":category })
 
     return render(request,"all-gallery/all-pics.html",{"images":images,"location":location,"category":category})
 
@@ -31,7 +31,7 @@ def search_results(request):
 
     else:
         message = "You haven't searched for any image"
-        return render(request, 'all-gallery/search.html',{"message":message})
+        return render(request, 'all-gallery/all-pics.html',{"message":message})
 
 def get_image_by_id(request,image_id):
     try:
