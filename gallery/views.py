@@ -14,9 +14,9 @@ def home(request):
         images = Image.view_location(location)
 
     elif 'category' in request.GET and request.GET['category']:
-        category = request.GET.get('categories')
+        cate = request.GET.get('categories')
         images = Image.view_category(category)
-        return render(request, 'all-gallery/all-pics.html', {"location":location,"images":images,"cat":category })
+        return render(request, 'all-gallery/all-pics.html', {"location":location,"images":images,"cate":cate })
 
     return render(request,"all-gallery/all-pics.html",{"images":images,"location":location,"category":category})
 
@@ -30,8 +30,8 @@ def search_results(request):
         return render(request, 'all-gallery/search.html',{"message":message,"images": searched_images})
 
     else:
-        message = "You haven't searched for any image"
-        return render(request, 'all-gallery/all-pics.html',{"message":message})
+        message = ""
+        return render(request, 'all-gallery/search.html',{"message":message})
 
 def get_image_by_id(request,image_id):
     try:

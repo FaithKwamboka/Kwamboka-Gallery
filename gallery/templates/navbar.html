@@ -21,13 +21,13 @@
 
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="/search/?categories=food" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Category
           </a>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            {% for category in category %}
-            <a class="dropdown-item" href="/?category={{category.id}}">{{category.category}}</a>
-            {%endfor%}
+            <a class="dropdown-item" href="/search/?categories=food">Food</a>
+            <a class="dropdown-item" href="/search/?categories=culture">Culture</a>
+            <a class="dropdown-item" href="/search/?categories=nature">Nature</a>
           </div>
         </li>
 
@@ -38,7 +38,7 @@
         <form class="navbar-form" role="search" action="{% url 'search_results' %}">
   
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search category" category="categories">
+            <input type="text" class="form-control" placeholder="Search by category i.e food,nature,culture" name="categories">
             <br><br>
           </div>
   

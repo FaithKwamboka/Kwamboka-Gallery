@@ -5,9 +5,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.home,name='home'),
-    path('search', views.search_results, name='search_results'),
-    # path('image/<id>',views.get_image_by_id,name ='image'),
-    re_path(r'^image/(\d+)',views.get_image_by_id,name ='image'),
+    path('search/', views.search_results, name='search_results'),
+    path('image/<id>',views.get_image_by_id,name ='image'),
+    # re_path(r'^image/(\d+)',views.get_image_by_id,name ='image'),
    
 ]
 

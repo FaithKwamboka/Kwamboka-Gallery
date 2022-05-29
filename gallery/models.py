@@ -1,5 +1,6 @@
 from django.db import models
 import datetime as dt
+from django.contrib.auth.models import User
 
 # Create your models here.
 class categories(models.Model):
@@ -47,6 +48,9 @@ class Image(models.Model):
         
     def delete_image(self):
         self.delete()
+        
+    def __str__(self):
+        return self.name
 
     @classmethod
     def all_images(self):
@@ -64,8 +68,10 @@ class Image(models.Model):
         return location
 
     @classmethod
-    def view_category(cls,category):
-        categories = cls.objects.filter(categories=category)
+    def view_category(cls,cate):
+        categories = cls.objects.filter(categories=cate)
         return categories
+    
+    
     
    

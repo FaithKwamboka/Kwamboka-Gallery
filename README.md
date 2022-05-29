@@ -11,7 +11,7 @@ As a user of the application I should be able to:
 * View different photos that interest me.
 * Click on a single photo to expand it and also view the details of the photo.
 * The photo details must appear on a modal within the same route as the main page.
-* Search for different categories of photos. (ie. Travel, Food)
+* Search for different categories of photos. (ie. Culture, Food, Nature)
 * Copy a link to the photo to share with my friends.
 * View photos based on the location they were taken.
 
@@ -60,10 +60,10 @@ After extracting the files,
 >`` cd name_of_folder`` 
 
 2. Creating a virtual environment
->``virtualenv virtual.``
+>``virtualenv virtual``
 
 3. Activating the virtual environment
->``source virtual/bin/activate.``
+>``source virtual/bin/activate``
 
 4. Running the application
 >``python3 manage.py runserverserver``
