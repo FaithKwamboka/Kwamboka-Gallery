@@ -4,7 +4,7 @@
 # Kwamboka's Gallery
 This is a personal gallery application that displays my photos for others to see.
 
-![gallery](https://user-images.githubusercontent.com/100117264/170846752-bf477629-d175-4b06-829b-9f92d12ed29d.png)
+![gallery_1](https://user-images.githubusercontent.com/100117264/170868604-eaeafa32-3610-404c-a95f-cbec80314e9a.png)
 
 ## User Stories
 As a user of the application I should be able to:
