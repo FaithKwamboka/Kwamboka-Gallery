@@ -29,11 +29,12 @@ As an admin i should be able to:
 | Admin Authentication | **On demand** | Access Admin dashboard |
 | Display all images | **Home page** | Clickable links to open any images in a modal |
 | Display single images on click | **On  click** | All details should be viewed|
-| To add an image  | **Through Admin dashboard** | Add and add categories and tag location of Image|
-| To edit image  | **Through Admin dashboard** | Redirected to the  image form details and editing happens|
-| To delete an image  | **Through Admin dashboard** | click on image object and confirm by delete button|
+| To add an image  | **Through Admin dashboard** | Add image categories, description and location|
+| To edit image  | **Through Admin dashboard** | Redirected to the  image form details for editing|
+| To delete an image  | **Through Admin dashboard** | click on image object and confirm delete|
 | To search  | **Enter text in search bar** | Users can search by category|
 | To filter by Location  | **Click drop-down on navbar** | Users can view images by Location|
+| To filter by Category  | **Click drop-down on navbar** | Users can view images by category|
 
 ## Technologies used
 * Python3
