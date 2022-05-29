@@ -15,6 +15,14 @@ As a user of the application I should be able to:
 * Copy a link to the photo to share with my friends.
 * View photos based on the location they were taken.
 
+
+## Admin Abilities
+As an admin i should be able to:
+* Sign in to the application
+* Create new images 
+* Delete images
+* Update images
+
 ## Specifications
 | Behaviour | Input | Output |
 | :---------------- | :---------------: | ------------------: |
